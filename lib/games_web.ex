@@ -24,6 +24,8 @@ defmodule GamesWeb do
       import Plug.Conn
       import GamesWeb.Gettext
       alias GamesWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView.Controller
     end
   end
 
@@ -42,6 +44,8 @@ defmodule GamesWeb do
       import GamesWeb.ErrorHelpers
       import GamesWeb.Gettext
       alias GamesWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView.Helpers
     end
   end
 
@@ -50,6 +54,8 @@ defmodule GamesWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+
+      import Phoenix.LiveView.Router
     end
   end
 

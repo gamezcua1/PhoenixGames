@@ -11,9 +11,10 @@ defmodule Games.Application do
       # Start the Ecto repository
       Games.Repo,
       # Start the endpoint when the application starts
-      GamesWeb.Endpoint
+      GamesWeb.Endpoint,
       # Starts a worker by calling: Games.Worker.start_link(arg)
       # {Games.Worker, arg},
+      {Games.TTTRooms, :ok}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
