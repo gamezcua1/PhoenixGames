@@ -34,4 +34,7 @@ defmodule Games.TTTRooms do
     |> occupy_room(name)
   end
 
+  def explode do
+    Agent.update(__MODULE__, fn _ -> %{} end)
+  end
 end
