@@ -2,7 +2,7 @@ defmodule Games.TTTRooms do
   use Agent
 
   def start_link(_) do
-    IO.puts "Games.TTTRooms started"
+    IO.puts("Games.TTTRooms started")
     Agent.start_link(fn -> %{} end, name: __MODULE__)
   end
 
@@ -11,15 +11,15 @@ defmodule Games.TTTRooms do
   end
 
   def new_room(username) do
-    Agent.update(__MODULE__, fn state -> 
+    Agent.update(__MODULE__, fn state ->
       Map.put(state, username, false)
     end)
   end
 
   def occupy_room({name, _state}, _) do
-    Agent.update(__MODULE__, fn state -> 
+    Agent.update(__MODULE__, fn state ->
       Map.put(state, name, true)
-    end) 
+    end)
 
     {:found, name}
   end

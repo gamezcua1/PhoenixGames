@@ -17,5 +17,4 @@ defmodule GamesWeb.LoginLive do
 
     """
   end
-
 end

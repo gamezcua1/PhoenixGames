@@ -5,5 +5,4 @@ defmodule GamesWeb.TicTacToeController do
   def index(conn, _params) do
     live_render(conn, GamesWeb.TicTacToeLive, session: %{})
   end
-  
 end
