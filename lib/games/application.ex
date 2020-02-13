@@ -14,9 +14,11 @@ defmodule Games.Application do
       GamesWeb.Endpoint,
       # Starts a worker by calling: Games.Worker.start_link(arg)
       # {Games.Worker, arg},
-      {Games.TTTRooms, :ok}
+      {Games.TTTRooms, :ok},
+      {Games.HangmanRooms, :ok},
     ]
 
+    Faker.start()
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Games.Supervisor]

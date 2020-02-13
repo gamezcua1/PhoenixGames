@@ -20,6 +20,8 @@ defmodule GamesWeb.Router do
     get "/", PageController, :index
 
     get "/tictactoe", TicTacToeController, :index
+
+    get "/hangman", HangmanController, :index
   end
 
   # Other scopes may use custom stacks.
