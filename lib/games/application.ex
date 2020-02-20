@@ -15,7 +15,7 @@ defmodule Games.Application do
       # Starts a worker by calling: Games.Worker.start_link(arg)
       # {Games.Worker, arg},
       {Games.TTTRooms, :ok},
-      {Games.HangmanRooms, :ok},
+      {Games.HangmanRooms, :ok}
     ]
 
     Faker.start()

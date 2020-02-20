@@ -6,5 +6,4 @@ defmodule GamesWeb.HangmanController do
   def index(conn, _params) do
     live_render(conn, GamesWeb.HangmanLive, session: %{})
   end
-
 end
